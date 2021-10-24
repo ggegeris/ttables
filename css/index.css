@@ -1,0 +1,135 @@
+body {
+    font-family: Poppins, sans-serif;
+    color: #333333;
+    background-color: #eeeeee;
+    font-size: 18px;
+}
+#info {
+    background-color: darkcyan;
+    color: #eeeeee;
+    width: 25%;
+}
+#questionnaire, #selection {
+    display: none;
+}
+#questionnaire {
+    float: left;
+    width: auto;
+}
+.sidepanel {
+    height: 100%;
+    width: auto;
+    float: left;
+    position: fixed; 
+    z-index: 2;
+    margin: 20px;
+    overflow-x: hidden; 
+}
+#selection {
+    height: 100%;
+    width: auto;
+    float: right;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    overflow-x: hidden; 
+}
+#selection > * {
+    margin-left: auto; 
+    margin-right: 0;
+}
+a {
+    color: darkcyan;
+    text-decoration: underline;
+}
+#title {
+    font-size: 36px;
+    font-weight: normal;
+}
+#importprompt {
+    display: none;
+}
+.topb {
+    border-top: 2px solid #333333;
+    width: 50%;
+    padding-top: 10px;
+}
+#results {
+    display: none;
+    padding-left: 25px;
+}
+#resultlist {
+    list-style-type: none;
+}
+li.resultitem:before {
+    content: 'expand_more';
+    font-family: 'Material Icons Outlined';
+    font-size: 18px;
+}
+table {
+    border-collapse: collapse;
+}
+.resultstable {
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+.shortname {
+    border: none;
+    padding: 0;
+    text-align:center;
+    font-size: 16px;
+    line-height: 27px;
+    width: 27px;
+    height: 27px;
+}
+.widener {
+    width: 50px;
+}
+.noleftborder {
+    border-left: none;
+}
+.norightborder {
+    border-right: none;
+}
+.notopborder {
+    border-top: none;
+}
+.nobottomborder {
+    border-bottom: none;
+}
+.rightalign {
+    text-align: right;
+}
+.optionstitle {
+    text-align: right;
+    height: 48px;
+}
+.crossbutton {
+    padding: 1px;
+    height: 24px;
+    width: 24px;
+}
+.desc {
+    font-size: 14px;
+}
+.expl {
+    padding-left: 25px;
+}
+.optiontext, .optionsubtext {
+    padding: 10px;
+}
+.optionsubtext {
+    color: #555555;
+    font-style: italic;
+}
+.option {
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    margin: 1px;
+}
+.material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons-outlined.md-48 { font-size: 48px; }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <title id=paget> Display - Transport tables </title>
+
+        <meta charset="utf-8">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/display.css">
+    </head>
+
+    <body>
+        <table id=main-block class=main-block>
+            <tr id=rowtitle>
+                <td id=pv class=pv colspan=3>Stop name</td>
+            </tr>
+            <tr id=rowhead>
+                <td id=arrowup class=ac>
+                    <button class=scrollb onclick="onArrowUp();">
+                        <span class="material-icons-outlined md-18">
+                            keyboard_arrow_up
+                        </span>
+                    </button>
+                </td>
+                <td class=filler></td>
+                <td class=filler></td>
+            </tr>
+
+            <tr id=row1>
+                <td id=rc1 class=rc>
+                    <div id=r1 class=r>1</div>
+                </td>
+                <td id=hc1 class=hc>Destination</td>
+                <td id=tc1 class=tc>Times</td>
+            </tr>
+            <tr id=row2>
+                <td id=rc2 class=rc>
+                    <div id=r2 class=r>2</div>
+                </td>
+                <td id=hc2 class=hc>Destination</td>
+                <td id=tc2 class=tc>Times</td>
+            </tr>
+            <tr id=row3>
+                <td id=rc3 class=rc>
+                    <div id=r3 class=r>3</div>
+                </td>
+                <td id=hc3 class=hc>Destination</td>
+                <td id=tc3 class=tc>Times</td>
+            </tr>
+            <tr id=row4>
+                <td id=rc4 class=rc>
+                    <div id=r4 class=r>4</div>
+                </td>
+                <td id=hc4 class=hc>Destination</td>
+                <td id=tc4 class=tc>Times</td>
+            </tr>
+
+            <tr id=rowbottom>
+                <td id=arrowdown class=ac>
+                    <button class=scrollb onclick="onArrowDown();">
+                        <span class="material-icons-outlined md-18">
+                            keyboard_arrow_down
+                        </span>
+                    </button>
+                </td>
+                <td class=filler></td>
+                <td class=filler></td>
+            </tr>
+            <tr id=rowfoot>
+                <td id=info colspan=2>info</td>
+                <td id=klok>klok</td>
+            </tr>
+        </table>
+
+        <script src="js/display.js"></script>
+
+    </body>
+</html> 

@@ -1,0 +1,115 @@
+body {
+    margin: 10px;
+}
+.main-block {
+    padding-left: 0;
+    padding-right: 0;
+    margin: auto;
+    display: block;
+    width: 1280px;
+    height: 720px;
+    background-color: #eeeeee;
+    font-family: Poppins, sans-serif;
+    color: #333333;
+}
+table {
+    /* border: 1px dotted #cccccc; */
+    border-collapse: collapse;
+}
+/* td {
+    border: 1px dotted #cccccc;
+} */
+.pv {
+    height: 120px;
+    border-bottom-style: solid;
+    border-bottom-color: #2d2d2d;
+    border-bottom-width: 5px;
+    font-size: 60px;
+    padding: 0;
+    padding-left: 30px;
+    
+}
+.filler {
+    height: 30px;
+    padding: 0;
+}
+.ac {
+    text-align: center;
+    padding: 0;
+}
+.scrollb {
+    border: none;
+    width: 120px;
+    height: 30px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.rc, .hc, .tc {
+    height: 75px;
+}
+.rc {
+    width: 75px;
+    font-size: 35px;
+    padding: 25px;
+}
+.hc {
+    width: 715px;
+    font-size: 45px;
+    padding: 0;
+}
+.tc {
+    width: 425px;
+    font-size: 45px;
+    text-align: right;
+    padding: 0;
+    padding-right: 25px;
+}
+.r {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    background-color: #aaaaaa;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+#row1 {
+    padding-top: 0;
+    padding-bottom: 25px;
+}
+#rc1 {
+    padding-top: 0;
+}
+#hc1, #tc1 {
+    padding-bottom: 25px;
+}
+#row4 {
+    padding-bottom: 0;
+    padding-top: 25px;
+}
+#rc4 {
+    padding-bottom: 0;
+}
+#hc4, #tc4 {
+    padding-top: 25px;
+}
+#rowfoot {
+    height: 83.5px;
+    border-top: 3px solid #333333;
+}
+#info {
+    font-size: 35px;
+    padding-left: 24.25px;
+}
+#klok {
+    font-size: 35px;
+    text-align: right;
+    padding-right: 24.25px;
+}
+.material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons-outlined.md-48 { font-size: 48px; }

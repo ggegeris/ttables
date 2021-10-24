@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id=paget> Setup - Transport tables </title>
+
+        <meta charset="utf-8">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+
+    <body>
+        <h1 id=title>
+            Transport tables
+        </h1>
+
+        <div id=info>
+            Loading...
+        </div>
+
+        <div id=questionnaire>
+            <p>
+                To start, fill the form below or import an existing link (<a href="help.html" target="__blank">what?</a>)
+            </p>
+
+            <p>
+                <input name=importbutton type=button value="Import settings" id=importbutton class=button onclick="toggleImport();">
+                <div id=importprompt>
+                    <label for=importfield>Link:</label>
+                    <input name=importfield id=importfield class=textfield>
+                    <input name=smimport type=button value="Import" id=smimport class=button onclick="importSubmit();">
+                </div>
+            </p>
+            <br>
+            <p>
+                <label for=searchfield>Search for stop:</label>
+                <input name=searchfield id=searchfield class=textfield onkeydown="searchFieldKeyDown(event);">
+                <input type=button value="Search" name=smsearch id=smsearch class=button disabled="disabled" onclick="searchStops(document.getElementById('searchfield').value);">
+                <div id=results></div>
+            </p>
+            <p>
+                <label for=>Or enter stop ID manually:</label> 
+                <input name=manualid id=manualid class=textfield onkeydown="manualFieldKeyDown(event);">
+                <input type=button value="Add" name=smmanual id=smmanual class=button disabled="disabled" onclick="addManually();">
+                <a style="font-size: 11px;" href="manualID.html" target="__blank">how do i get it myself?</a>
+                <label id=manualinfo></label>
+            </p>
+
+            <p style="font-size:18px; padding-left:25px; margin-top: 50px;">Preferences
+                <input type=button value="Submit" name=smpref id=smpref class=button onclick="updateSelectionDisplay();"></p>
+            <p>
+                <input type=checkbox name=scrollspeedcheck id=scrollspeedcheck onclick="updateFields();">
+                <label for=scrollspeedcheck>Custom scrolling speed</label>
+                <input disabled=disabled id=scrollspeedinput class=textfield value=2>
+            </p>
+            <p style="margin-bottom:5px;">
+                <input type=checkbox name=absolutespeedcheck id=absolutespeedcheck onclick="updateFields();">
+                <label for=absolutespeedcheck>Custom timing approach</label>
+                <div style="padding-left: 25px;">
+                    <input type=radio disabled=disabled name=dynamicspeed id=dynamicspeed checked=checked onclick="updateFields(1);">
+                    <label for=dynamicspeed class=desc>Dynamic speed - scrolling speed is multiplied by stop count at each page (default speed - 2)</label>
+                    <br>
+                    <input type=radio disabled=disabled name=absolutespeed id=absolutespeed onclick="updateFields(2);">
+                    <label for=absolutespeed class=desc>Absolute speed - scrolling speed is the same for each page (default speed - 8)</label>
+                </div>
+            </p>
+            <p>
+                <input type=checkbox name=timecollapsedcheck id=timecollapsedcheck onclick="updateFields();">
+                <label for=timecollapsedcheck>Custom collapse time</label>
+                <input disabled=disabled id=timecollapsedinput class=textfield value=60  onclick="updateFields();">
+                <div class="desc expl">Time period in which <i>t</i> gets displayed as <i>Δt min</i> (not <i>hh:mm</i>)</div>
+            </p>
+            <p>
+                <input type=checkbox name=timediscardedcheck id=timediscardedcheck onclick="updateFields();">
+                <label for=timediscardedcheck>Custom scrolling speed</label>
+                <input disabled=disabled id=timediscardedinput class=textfield value=60  onclick="updateFields();">
+                <div class="desc expl">Time period in which the remaining time is displayed</div>
+            </p>
+            <p>
+                <input type=checkbox name=nameidcheck id=nameidcheck onclick="updateFields();">
+                <label for=nameidcheck>Stop name ID</label>
+                <select disabled=disabled id=nameidselect class=selectbox></select>
+                <div class="desc expl">In case of different stop names, check this to avoid specifying each time</div>
+            </p>
+        </div>
+
+        
+        <div id=selection>
+            <p class=optionstitle>
+                selected options:
+            </p>
+            <table id=optionstable class=optionslist><tbody>
+                <tr>
+                    <td colspan=3 class=optionstitle>
+                        stops:
+                    </td>
+                </tr>
+                <tr class=option>
+                    <!-- <td class=optiontext>
+                        <button class=crossbutton onclick="clearStop();">
+                            <span class="material-icons-outlined md-18">
+                                clear
+                            </span>
+                        </button>
+                        
+                    </td>
+                    <td class=optiontext>
+                        3008
+                    </td>
+                    <td class=optionsubtext>
+                        Nacionālā bibliotēka
+                    </td> -->
+                </tr>
+                <tr>
+                    <td colspan=3 class=optionstitle>
+                        preferences:
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3 class=optionstitle> 
+                        <a id=copylink href="javascript:copyLink()">copy link</a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>
