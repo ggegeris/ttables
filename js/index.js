@@ -14,9 +14,103 @@ function toggleImport()
     }
 }
 
+function importFieldKeyDown(event)
+{
+    if(event.keyCode == 13)
+    {
+        importSubmit();
+    }
+    else
+    {
+        document.getElementById("smimport").disabled = false;
+    }
+}
+
 function importSubmit()
 {
-    // to do
+    document.getElementById("smimport").disabled = true;
+    toggleImport();
+    var importOptions;
+    try
+    {
+        importOptions = new URLSearchParams(new URL(document.getElementById('importfield').value).search);
+    }
+    catch
+    {
+        console.error("invalid url");
+        throw "invalidimporturl";
+    }
+    // console.log(importOptions);
+    document.getElementById("importfield").value = "";
+
+    var stopIDs = importOptions.getAll("stopID");
+    for(i in stopIDs)
+    {
+        var stopID = stopIDs[i], stopIDnumber = "", stopIDletter = "";
+        for(var j = 0; j < stopID.length; j++)
+        {
+            if(stopID[j] >= '0' && stopID[j] <= '9')
+            {
+                stopIDnumber += stopID[j];
+            }
+            else
+            {
+                stopIDletter += stopID[j];
+            }
+        }
+        var app = 0;
+        while(stopIDnumber.length < 4)
+        {
+            stopIDnumber = "0" + stopIDnumber;
+            app++;
+        }
+        if(stopID != stopIDnumber + stopIDletter)
+        {
+            stopID = stopIDnumber + stopIDletter;
+            console.debug(`prepended ${app}x'0' to stopID`)
+        }
+        // console.log(stopID);
+        addStop(stopID);
+    }
+    
+    if(importOptions.has('scrollSpeed'))
+    {
+        document.getElementById("scrollspeedcheck").checked = true;
+        document.getElementById("scrollspeedinput").value = importOptions.get("scrollSpeed");
+    }
+    if(importOptions.has('timeCollapsed'))
+    {
+        document.getElementById("timecollapsedcheck").checked = true;
+        document.getElementById("timecollapsedinput").value = importOptions.get("timeCollapsed");
+    }
+    if(importOptions.has('timeDiscarded'))
+    {
+        document.getElementById("timediscardedcheck").checked = true;
+        document.getElementById("timediscardedinput").value = importOptions.get("timeDiscarded");
+    }
+    if(importOptions.has('nameID'))
+    {
+        document.getElementById("nameidcheck").checked = true;
+        document.getElementById("nameidselect").value = importOptions.get("nameID");
+    }
+    if(importOptions.has('absoluteSpeed'))
+    {
+        document.getElementById("absolutespeedcheck").checked = true;
+        if(importOptions.get("absoluteSpeed") == "true" || importOptions.get("absoluteSpeed") == "1")
+        {
+            updateFields(2);
+        }
+        else
+        {
+            updateFields(1);
+        }
+    }
+    else
+    {
+        updateFields();
+    }
+    updateSelectionDisplay();
+    // console.log(importOptions.keys());
 }
 
 var paths = {stops: "stops.txt", 

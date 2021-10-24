@@ -32,8 +32,8 @@
                 <input name=importbutton type=button value="Import settings" id=importbutton class=button onclick="toggleImport();">
                 <div id=importprompt>
                     <label for=importfield>Link:</label>
-                    <input name=importfield id=importfield class=textfield>
-                    <input name=smimport type=button value="Import" id=smimport class=button onclick="importSubmit();">
+                    <input name=importfield id=importfield class=textfield onkeydown="importFieldKeyDown(event);">
+                    <input name=smimport type=button value="Import" id=smimport class=button onclick="importSubmit();" disabled="disabled">
                 </div>
             </p>
             <br>
