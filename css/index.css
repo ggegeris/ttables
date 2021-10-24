@@ -5,9 +5,10 @@ body {
     font-size: 18px;
 }
 #info {
-    background-color: darkcyan;
+    background-color: #555555;
     color: #eeeeee;
-    width: 25%;
+    width: auto;
+    display: inline-block
 }
 #questionnaire, #selection {
     display: none;
