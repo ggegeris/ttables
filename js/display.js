@@ -209,7 +209,7 @@ function wait()
         }
         catch(err)
         {
-            console.error(`couldn't prepare the timetable (error: ${err})`);
+            console.error(`couldn't prepare the timetable (${err})`);
         }
     }
 }
