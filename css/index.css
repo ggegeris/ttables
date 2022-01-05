@@ -1,5 +1,7 @@
-body {
+* {
     font-family: Poppins, sans-serif;
+}
+body {
     color: #333333;
     background-color: #eeeeee;
     font-size: 18px;
