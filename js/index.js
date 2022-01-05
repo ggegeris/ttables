@@ -582,6 +582,8 @@ function updateSelectionDisplay()
     }
     document.getElementById("optionstable").innerHTML += `<tr>
     <td colspan=3 class=optionstitle> 
+        <a id=openlink href="javascript:openLink()">open in new tab</a>
+        <br>
         <a id=copylink href="javascript:copyLink()">copy link</a>
     </td>
 </tr>`
@@ -673,6 +675,25 @@ function updateNameIDlist()
     }
 }
 
+function openLink()
+{
+    var destination = window.location.href.split("/?")[0].split("?")[0].split("/#")[0].split("#")[0];
+    if(destination[destination.length - 1] != '/')
+    {
+        destination += '/';
+    }
+    destination += "display.html";
+    var params = new URLSearchParams();
+    for(var i in options.stops)
+    {
+        params.append("stopID", options.stops[i].stopID);
+    }
+    for(var i in options.preferences)
+    {
+        params.append(i, options.preferences[i]);
+    }
+    window.open(destination + "?" + params.toString(), "_blank");
+}
 function copyLink()
 {
     var destination = window.location.href.split("/?")[0].split("?")[0].split("/#")[0].split("#")[0];
