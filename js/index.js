@@ -275,7 +275,6 @@ function searchStops(query)
             }
         }
         document.getElementById("resultstable").innerHTML += "<tr class=\"resultstable noleftborder norightborder nobottomborder\"><td class=resultstable rowspan=10 style=\"border: none;\"><a href=\"javascript:;\" id=expcolresults2 onclick=\"expcolresults();\">collapse</a></td></tr>";
-        expcolresults();
     }, 100);
 }
 
