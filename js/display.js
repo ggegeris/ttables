@@ -337,6 +337,9 @@ function process(stopID)
         colour = routedata["route_color"],
         textcolour = routedata["route_text_color"];
 
+        // shape_id-s might have matching destinations but different start points
+        shapeid = shapeid.split('_')[0] + '_' + shapeid.split('_')[1] + '_' + shapeid.split('_')[2] + '_' + shapeid.split('-')[shapeid.split('-').length - 1];
+
         // check days and push
         if(caldata["monday"] == "1" && caldata["tuesday"] == "1" && caldata["wednesday"] == "1" && caldata["thursday"] == "1" && caldata["friday"] == "1")
         {
