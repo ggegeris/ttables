@@ -382,14 +382,14 @@ function process(stopID)
     // console.log(timetableWE);
 }
 
-var next = {}, scroll = 0;
+var next = {}, scroll = 0, timetable2D, timetable2M;
 
 function update()
 {
     console.debug("doin da komputering");
 
     time = now();
-    var timetable2D = weekday(false) ? timetableWD : timetableWE,
+    timetable2D = weekday(false) ? timetableWD : timetableWE;
     timetable2M = weekday(true) ? timetableWD : timetableWE;
 
     for(route in timetable2D)
