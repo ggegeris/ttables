@@ -376,7 +376,7 @@ function process(stopID)
             timetableWE[shapeid].departures.sort(function(a, b) {return a - b});
         }
     }
-    console.log(`${invalidC} out of ${stoptimedata.length} departures at ${stopID} are invalid a.k.a. out of date`);
+    console.log(`${stoptimedata.length - invalidC} out of ${stoptimedata.length} departures at ${stopID} are valid and rendered`);
     // console.log("full timetables (weekday, then weekend): ")
     // console.log(timetableWD);
     // console.log(timetableWE);
