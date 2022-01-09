@@ -74,3 +74,9 @@ when making this thing, i couldn't decide on how the preferences should be set u
     > the index refers to the position of the stop name in the list of selected stop names. keep in mind that **the first stop name is at position 0**.
 
     this parameter does not have a default value. if you don't specify it in setup, you'll be asked upon launching the display every time.
+
+## data
+
+data used in timetables is provided by rīgas satiksme and available at [data.gov.lv](https://data.gov.lv/dati/lv/dataset/marsrutu-saraksti-rigas-satiksme-sabiedriskajam-transportam)
+
+the data is updated by rīgas satiksme once a month. on top of that, the data must be manually submitted to the repo by me (and that can take a while).
