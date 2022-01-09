@@ -10,7 +10,7 @@ go to ***[ggegeris.github.io/ttables](ggegeris.github.io/ttables)*** to set up a
 * on the right side you can see what's been added, remove stops and generate/open the timetable
 
 1. type a search term in the search box and press enter or the search button
-2. the results will something like this: 
+2. the results will look something like this: 
 
     ![a piece of search results](https://ggegeris.github.io/ttables/img/help-results.jpg)
 
