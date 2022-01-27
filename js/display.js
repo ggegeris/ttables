@@ -495,9 +495,10 @@ function nextTime(time1, time2)
     {
         throw "duplicatetimes";
     }
+
     if(time1 == 0)
     {
-        out += "due"
+        out += "<i><1 min</i>";
     }
     else if(time1 - 1 < timeCollapsed /* || true */)
     {
@@ -512,6 +513,7 @@ function nextTime(time1, time2)
     {
         throw "waittimetoolong";
     }
+    
     if(time2 - 1 < timeCollapsed /* || true */)
     {
         out += `; ${time2} min`;
