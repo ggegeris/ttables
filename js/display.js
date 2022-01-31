@@ -1,4 +1,4 @@
-// placeholders (not pornhub!)
+// placeholders (not that p-hub!)
 /* phStopName = "Nacionālā blibliotēka",
     phRouteColour = "#FF000C",
     phTextColour = "#FFFFFF",
